@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u041F\u0440\u043E\u0441\u043C\u043E\u0442\u0440"
 --- !u!1 &5493703478948581841
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 65, y: -0.5015}
-  m_SizeDelta: {x: 96.8105, y: 53.0692}
+  m_SizeDelta: {x: 100, y: 53.0692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7756487213410378741
 CanvasRenderer:
