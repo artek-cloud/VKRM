@@ -42,13 +42,6 @@ void Start()
         }
     }
 
-
-    public void SearchClear()
-    {
-        objectSearch.text = "";
-        UpdateItems();
-    }
-
     public void UpdateItems()
 {
 modelsCount = 0;
