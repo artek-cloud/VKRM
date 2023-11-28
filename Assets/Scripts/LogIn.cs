@@ -4,28 +4,22 @@ using UnityEngine;
 using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class LogIn : MonoBehaviour
 {
 
     public InputField logIn;
     public InputField password;
+    public Text errorText;
     //для получения логина и пароля использовать logIn.text и password.text
     //поле Type таблицы Users: 0 - просмотр, 1 - администратор
 
     private string servDbName = "URI=file:D:/ServDB.db";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static string userName;
+    public static string userType;
 
     public void LogingIn()
     {
@@ -39,13 +33,22 @@ public class LogIn : MonoBehaviour
 
                 using (IDataReader reader = command.ExecuteReader())
                 {
-                    while(reader.Read())
+                    /** while(reader.Read())
+                     {
+                         if (reader["Login"].ToString() != "")
+                             Debug.Log(reader["Login"].ToString() + " и " + reader["Password"].ToString() + " и " + reader["Name"].ToString());
+                         else
+                             Debug.Log("Данной учетной записи не существует!");
+                     } **/
+                    if (reader.Read())
                     {
-                        if (reader["Login"].ToString() != "")
-                            Debug.Log(reader["Login"].ToString() + " и " + reader["Password"].ToString() + " и " + reader["Name"].ToString());
-                        else
-                            Debug.Log("Данной учетной записи не существует!");
+                        userName = reader["Name"].ToString();
+                        userType = reader["Type"].ToString();
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        return;
                     }
+                    else
+                        errorText.enabled = true;
                     reader.Close();
                 }    
             }
@@ -53,5 +56,10 @@ public class LogIn : MonoBehaviour
         }
     }
 
-   
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+
 }
