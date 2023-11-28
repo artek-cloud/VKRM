@@ -10,13 +10,19 @@ public class MainMenu : MonoBehaviour
     public Text typeAdmin;
     public Text typeView;
 
+    //Переменные для управления кнопкой администрирования
+    public Button adminButton;
+
 
     // Start is called before the first frame update
     void Start()
     {
         userName.text = LogIn.userName + "!";
         if (LogIn.userType == "1")
+        {
             typeAdmin.enabled = true;
+            adminButton.enabled = true;
+        }
         else
             typeView.enabled = true;
     }
