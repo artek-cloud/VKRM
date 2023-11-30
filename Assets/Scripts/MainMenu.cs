@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
         if (LogIn.userType == "1")
         {
             typeAdmin.enabled = true;
-            adminButton.enabled = true;
+            adminButton.gameObject.SetActive(true);
         }
         else
             typeView.enabled = true;

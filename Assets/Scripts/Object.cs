@@ -39,7 +39,7 @@ public class Object : MonoBehaviour
         //var database = GetComponent<DataBase>();
 
         //searchResult.text = "Результат\n";
-        searchResult.text = DataBase.objectSearchResult.text + "\n";
+        searchResult.text = ObjectScrollAdapter.objectON;
 
         using (var connection = new SqliteConnection(dbName))
         {
