@@ -1022,8 +1022,6 @@ MonoBehaviour:
   logIn: {fileID: 959350769}
   password: {fileID: 74346061}
   errorText: {fileID: 1518739370}
-  userName: 
-  userType: 
 --- !u!4 &1255961966
 Transform:
   m_ObjectHideFlags: 0
@@ -1366,19 +1364,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1418,11 +1416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 445
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -230
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5225365840705795054, guid: 0ae0d36bd51a7aa48bcbab79ea46d6c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

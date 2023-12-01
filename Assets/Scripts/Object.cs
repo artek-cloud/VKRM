@@ -16,6 +16,7 @@ public class Object : MonoBehaviour
     public RectTransform prefab;
     private int modelsCount;
     public RectTransform content;
+    public Text kolvo;
 
     private string dbName = "URI=file:TechpriborDB.db";
 
@@ -88,7 +89,11 @@ public class Object : MonoBehaviour
             connection.Open();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "select p.Obozn, p.Naim, opr.Kolvo from Objects o inner join OPReference opr on(opr.ObjectID = o.ID) inner join Products p on(p.ID = opr.ProductID) where o.ID = " + ObjectScrollAdapter.objectID + " order by p.ID;";
+                if (kolvo.text == "")
+                    command.CommandText = "select p.Obozn, p.Naim, opr.Kolvo from Objects o inner join OPReference opr on(opr.ObjectID = o.ID) inner join Products p on(p.ID = opr.ProductID) where o.ID = " + ObjectScrollAdapter.objectID + " order by p.ID;";
+
+                else
+                    command.CommandText = "select p.Obozn, p.Naim, opr.Kolvo*" + Convert.ToInt32(kolvo.text) + " as Kolvo from Objects o inner join OPReference opr on(opr.ObjectID = o.ID) inner join Products p on(p.ID = opr.ProductID) where o.ID = " + ObjectScrollAdapter.objectID + " order by p.ID;";
 
                 using (IDataReader reader = command.ExecuteReader())
                 {
