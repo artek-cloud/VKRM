@@ -23,7 +23,6 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateDB();
         userName.text = LogIn.userName + "!";
         if (LogIn.userType == "1")
         {
@@ -34,7 +33,7 @@ public class MainMenu : MonoBehaviour
             typeView.enabled = true;
     }
 
-    public void CreateDB()
+    public void RefreshDB()
     {
         using (var connection = new SqliteConnection(dbName))
         {
@@ -92,11 +91,6 @@ public class MainMenu : MonoBehaviour
     public void ObjectSearch()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void ProductSearch()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void Exit()
