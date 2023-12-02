@@ -47,4 +47,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LinkAddKolvo.unity
     guid: a0941d4b320bfa54d98cf310c65d9a17
+  - enabled: 1
+    path: Assets/Scenes/ObjDelete.unity
+    guid: 73edc44a221e0254bb33dde0568cd88f
+  - enabled: 1
+    path: Assets/Scenes/ObjDeleteConfirm.unity
+    guid: 32fcb58d24a37ef4291edd6940d56139
+  - enabled: 1
+    path: Assets/Scenes/ProdDelete.unity
+    guid: f6561cf71bdf3cd4eaf9f4db8810bdc1
+  - enabled: 1
+    path: Assets/Scenes/ProdDeleteConfirm.unity
+    guid: 89e80982e7f98a24ba255d93180a8b3f
+  - enabled: 1
+    path: Assets/Scenes/LinkDelete.unity
+    guid: af6b8c84feb496a44b13e6ef3f60816c
+  - enabled: 1
+    path: Assets/Scenes/LinkDeleteConfirm.unity
+    guid: cd72ed7aa27f0694ab4983760e833e4c
+  - enabled: 1
+    path: Assets/Scenes/ObjEdit.unity
+    guid: 8174aafe91cc4b64692c24a33bf775e4
+  - enabled: 1
+    path: Assets/Scenes/ObjEditType.unity
+    guid: 525d1dc4b66fa524eb7cf74c5f4b5349
+  - enabled: 1
+    path: Assets/Scenes/ProdEdit.unity
+    guid: 706cd71ea60ef2942a3e8688040d505b
   m_configObjects: {}

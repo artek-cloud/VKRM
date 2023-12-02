@@ -206,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ObjectAdd, Assembly-CSharp
+      - m_Target: {fileID: 27196823}
+        m_TargetAssemblyTypeName: ProductAdd, Assembly-CSharp
         m_MethodName: ObjectAddBack
         m_Mode: 1
         m_Arguments:
@@ -1619,9 +1619,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ObjectAdd, Assembly-CSharp
-        m_MethodName: ObjectAdding
+      - m_Target: {fileID: 27196823}
+        m_TargetAssemblyTypeName: ProductAdd, Assembly-CSharp
+        m_MethodName: ProductAdding
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

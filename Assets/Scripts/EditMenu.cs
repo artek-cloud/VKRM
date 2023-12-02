@@ -10,4 +10,14 @@ public class EditMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
     }
 
+    public void EditObj()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 12);
+    }
+
+    public void EditProd()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 14);
+    }
+
 }
