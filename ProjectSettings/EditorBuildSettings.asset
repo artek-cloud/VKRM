@@ -20,4 +20,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ObjectSearchResult.unity
     guid: 7966c074742b6a94994d04e56e666b65
+  - enabled: 1
+    path: Assets/Scenes/AdminMenu.unity
+    guid: 3eefa8faa7e8607479295f42afd44804
+  - enabled: 1
+    path: Assets/Scenes/AddMenu.unity
+    guid: 368ef2c503e203e4fa49f3b774b30455
+  - enabled: 1
+    path: Assets/Scenes/DeleteMenu.unity
+    guid: 1503bf0751af09944ad0fce468fad771
+  - enabled: 1
+    path: Assets/Scenes/EditMenu.unity
+    guid: 1c09bdef4990b8640a56b6b3591a98a8
+  - enabled: 1
+    path: Assets/Scenes/ObjectAddMenu.unity
+    guid: dcd6d00354ea42649b6a57d1c6ed388d
+  - enabled: 1
+    path: Assets/Scenes/ProductAddMenu.unity
+    guid: fdd29898e66ca3043998a7ff3662569f
+  - enabled: 1
+    path: Assets/Scenes/LinkAddObject.unity
+    guid: eb7f0067cd70d4842b820bd9852ad4d3
+  - enabled: 1
+    path: Assets/Scenes/LinkAddProduct.unity
+    guid: eae3b8d54e58e324faae28b0e5117aaa
+  - enabled: 1
+    path: Assets/Scenes/LinkAddKolvo.unity
+    guid: a0941d4b320bfa54d98cf310c65d9a17
   m_configObjects: {}

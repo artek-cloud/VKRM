@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ProductSearch : MonoBehaviour
+public class DeleteMenu : MonoBehaviour
 {
-    public void ProductSearchBack()
+    public void DeleteBack()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }

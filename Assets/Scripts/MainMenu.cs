@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
     public Button adminButton;
 
     private string dbName = "URI=file:TechpriborDB.db";
-    private string servDbName = "URI=file:D:/Unity/VKRM/TechpriborDB.db";
+    private string servDbName = "URI=file:D:/ServDB.db";
 
 
     // Start is called before the first frame update
@@ -46,6 +46,12 @@ public class MainMenu : MonoBehaviour
                 command.CommandText = "CREATE TABLE if not exists Products (ID   INTEGER NOT NULL UNIQUE, Obozn VARCHAR(255) NOT NULL UNIQUE, Naim  VARCHAR(255) NOT NULL, PRIMARY KEY(ID AUTOINCREMENT));";
                 command.ExecuteNonQuery();
                 command.CommandText = "CREATE TABLE if not exists OPReference (ID    INTEGER NOT NULL UNIQUE, ObjectID  INTEGER NOT NULL, ProductID INTEGER NOT NULL, Kolvo INTEGER, PRIMARY KEY(ID AUTOINCREMENT), FOREIGN KEY(ProductID) REFERENCES Products(ID), FOREIGN KEY(ObjectID) REFERENCES Objects(ID));";
+                command.ExecuteNonQuery();
+                command.CommandText = "delete from Objects;";
+                command.ExecuteNonQuery();
+                command.CommandText = "delete from Products;";
+                command.ExecuteNonQuery();
+                command.CommandText = "delete from OPReference;";
                 command.ExecuteNonQuery();
                 using (var connection2 = new SqliteConnection(servDbName))
                 {
@@ -91,6 +97,11 @@ public class MainMenu : MonoBehaviour
     public void ObjectSearch()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Admin()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
 
     public void Exit()
