@@ -13,13 +13,68 @@ public class LogIn : MonoBehaviour
     public InputField logIn;
     public InputField password;
     public Text errorText;
+    public Toggle saveCheck;
     //для получения логина и пароля использовать logIn.text и password.text
     //поле Type таблицы Users: 0 - просмотр, 1 - администратор
 
     private string servDbName = "URI=file:D:/ServDB.db";
+    private string profDb = "URI=file:TechpriborDB.db";
 
     public static string userName;
     public static string userType;
+
+    void Start()
+    {
+        SavedProfile();
+    }
+
+    public void SavedProfile()
+    {
+        using (var connection = new SqliteConnection(profDb))
+        {
+            connection.Open();
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "create table if not exists SavedProfile(Login varchar(255));";
+                command.ExecuteNonQuery();
+                command.CommandText = "select Login from SavedProfile;";
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                        logIn.text = (reader["Login"].ToString());
+                }
+            }
+            connection.Close();
+        }
+    }
+
+    public void SaveProfile()
+    {
+        using (var connection = new SqliteConnection(profDb))
+        {
+            connection.Open();
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "insert into SavedProfile values('" + logIn.text + "');";
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
+        }
+    }
+
+    public void DeleteProfile()
+    {
+        using (var connection = new SqliteConnection(profDb))
+        {
+            connection.Open();
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "delete from SavedProfile;";
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
+        }
+    }
 
     public void LogingIn()
     {
@@ -44,6 +99,10 @@ public class LogIn : MonoBehaviour
                     {
                         userName = reader["Name"].ToString();
                         userType = reader["Type"].ToString();
+                        if (saveCheck.isOn)
+                            SaveProfile();
+                        else
+                            DeleteProfile();
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                         return;
                     }
